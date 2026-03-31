@@ -1,3 +1,5 @@
+# https://credit-fraud-app-app-5khggrupg6njjmf96kpusv.streamlit.app/
+
 import streamlit as st
 import numpy as np
 import joblib
@@ -25,6 +27,6 @@ if st.button("Predict"):
     prediction = pipeline.predict(features)
 
     if prediction[0] == 1:
-        st.error("⚠️ Fraudulent Transaction")
+        st.error("Fraudulent Transaction")
     else:
-        st.success("✅ Legitimate Transaction")
+        st.success("Legitimate Transaction")
